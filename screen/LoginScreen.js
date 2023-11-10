@@ -1,6 +1,13 @@
 // Trịnh Gia Bảo - 21521866
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Keyboard,
+} from 'react-native';
 import MainButton from '../UI/MainButton';
 import Header from '../UI/Header';
 import BottomLine from '../UI/BottomLine';
@@ -8,10 +15,12 @@ import InputField from '../UI/InputField';
 import {useAuthContext} from '../context/auth-context';
 
 const LoginScreen = ({navigation}) => {
-  const {onLogin} = useAuthContext();
+  const {onLogin, email, password, onChangeEmail, onChangePassword} =
+    useAuthContext();
 
   const loginHandler = () => {
-    onLogin(enteredEmail, enteredPassword);
+    onLogin(email, password);
+    Keyboard.dismiss();
   };
   // Trịnh Gia Bảo - 21521866
   return (
@@ -21,15 +30,15 @@ const LoginScreen = ({navigation}) => {
         placeholder="Email"
         keyboardType="email-address"
         iconName="envelope"
-        value={enteredEmail}
-        onChangeText={changeEmailHandler}
+        value={email}
+        onChangeText={onChangeEmail}
       />
       <InputField
         placeholder="Password"
         iconName="lock"
         secureTextEntry={true}
-        value={enteredPassword}
-        onChangeText={changePasswordHandler}
+        value={password}
+        onChangeText={onChangePassword}
       />
 
       <TouchableOpacity style={styles.forgotPassword}>
@@ -60,9 +69,9 @@ const LoginScreen = ({navigation}) => {
     </View>
   );
 };
-// Trịnh Gia Bảo - 21521866
-export default LoginScreen;
 
+export default LoginScreen;
+// Trịnh Gia Bảo - 21521866
 const styles = StyleSheet.create({
   body: {
     flex: 1,
