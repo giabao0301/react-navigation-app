@@ -1,3 +1,4 @@
+// Trịnh Gia Bảo - 21521866
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Header from '../UI/Header';
@@ -25,6 +26,7 @@ const SignUpScreen = ({navigation}) => {
         iconName="lock"
         secureTextEntry={true}
       />
+      {/* Trịnh Gia Bảo - 21521866 */}
       <MainButton title="CREATE" />
       <BottomLine
         content="Already have an account?"

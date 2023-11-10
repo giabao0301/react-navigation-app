@@ -1,3 +1,4 @@
+// Trịnh Gia Bảo - 21521866
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 

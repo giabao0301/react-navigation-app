@@ -1,3 +1,4 @@
+// Trịnh Gia Bảo - 21521866
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import MainButton from '../UI/MainButton';
@@ -7,21 +8,12 @@ import InputField from '../UI/InputField';
 import {useAuthContext} from '../context/auth-context';
 
 const LoginScreen = ({navigation}) => {
-  const [enteredEmail, setEnteredEmail] = useState('');
-  const [enteredPassword, setEnteredPassword] = useState('');
-  const {isAuthenticated, onLogin, onLogout} = useAuthContext();
-
-  const changeEmailHandler = enteredValue => {
-    setEnteredEmail(enteredValue);
-  };
-
-  const changePasswordHandler = enteredValue => {
-    setEnteredPassword(enteredValue);
-  };
+  const {onLogin} = useAuthContext();
 
   const loginHandler = () => {
     onLogin(enteredEmail, enteredPassword);
   };
+  // Trịnh Gia Bảo - 21521866
   return (
     <View style={styles.body}>
       <Header title="Welcome" />
@@ -45,7 +37,7 @@ const LoginScreen = ({navigation}) => {
       </TouchableOpacity>
 
       <MainButton title="LOG IN" onPress={loginHandler} />
-
+      {/* Trịnh Gia Bảo - 21521866 */}
       <View style={styles.loginOption}>
         <Text style={styles.blackBoldText}>Or login with</Text>
         <View style={styles.logoOptionLogo}>
@@ -68,7 +60,7 @@ const LoginScreen = ({navigation}) => {
     </View>
   );
 };
-
+// Trịnh Gia Bảo - 21521866
 export default LoginScreen;
 
 const styles = StyleSheet.create({
@@ -95,7 +87,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 50,
   },
-
+  // Trịnh Gia Bảo - 21521866
   forgotPassword: {
     alignSelf: 'flex-end',
   },

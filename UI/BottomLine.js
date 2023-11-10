@@ -1,3 +1,4 @@
+// Trịnh Gia Bảo - 21521866
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
@@ -11,9 +12,7 @@ const BottomLine = props => {
     </View>
   );
 };
-
 export default BottomLine;
-
 const styles = StyleSheet.create({
   bottomLine: {
     flexDirection: 'row',

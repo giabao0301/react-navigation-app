@@ -1,3 +1,4 @@
+// Trịnh Gia Bảo - 21521866
 import React from 'react';
 import {View, TextInput, StyleSheet} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -24,7 +25,7 @@ const InputField = props => {
     </View>
   );
 };
-
+// Trịnh Gia Bảo - 21521866
 export default InputField;
 const styles = StyleSheet.create({
   inputField: {

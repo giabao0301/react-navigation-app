@@ -1,3 +1,4 @@
+// Trịnh Gia Bảo - 21521866
 import React from 'react';
 import {StyleSheet, View, Image, Text} from 'react-native';
 
@@ -9,9 +10,7 @@ const Header = props => {
     </View>
   );
 };
-
 export default Header;
-
 const styles = StyleSheet.create({
   header: {
     alignItems: 'center',
