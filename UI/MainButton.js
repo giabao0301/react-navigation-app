@@ -3,10 +3,8 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 const MainButton = props => {
   return (
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText} onPress={props.onPress}>
-        {props.title}
-      </Text>
+    <TouchableOpacity style={styles.button} onPress={props.onPress}>
+      <Text style={styles.buttonText}>{props.title}</Text>
     </TouchableOpacity>
   );
 };

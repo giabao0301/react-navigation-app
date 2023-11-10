@@ -14,7 +14,14 @@ const LoginScreen = ({navigation}) => {
   const changeEmailHandler = enteredValue => {
     setEnteredEmail(enteredValue);
   };
-  console.log(enteredEmail);
+
+  const changePasswordHandler = enteredValue => {
+    setEnteredPassword(enteredValue);
+  };
+
+  const loginHandler = () => {
+    onLogin(enteredEmail, enteredPassword);
+  };
   return (
     <View style={styles.body}>
       <Header title="Welcome" />
@@ -29,12 +36,15 @@ const LoginScreen = ({navigation}) => {
         placeholder="Password"
         iconName="lock"
         secureTextEntry={true}
+        value={enteredPassword}
+        onChangeText={changePasswordHandler}
       />
 
       <TouchableOpacity style={styles.forgotPassword}>
         <Text style={styles.pinkText}>Forgot password?</Text>
       </TouchableOpacity>
-      <MainButton title="LOG IN" />
+
+      <MainButton title="LOG IN" onPress={loginHandler} />
 
       <View style={styles.loginOption}>
         <Text style={styles.blackBoldText}>Or login with</Text>

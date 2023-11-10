@@ -5,7 +5,13 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 const InputField = props => {
   return (
     <View style={styles.inputField}>
-      <FontAwesome name={props.iconName} style={styles.inputIcon} />
+      <FontAwesome
+        name={props.iconName}
+        style={[
+          styles.inputIcon,
+          {fontSize: props.iconName === 'envelope' ? 20 : 30},
+        ]}
+      />
       <TextInput
         style={styles.input}
         placeholder={props.placeholder}
@@ -33,11 +39,10 @@ const styles = StyleSheet.create({
   },
   inputIcon: {
     color: '#000',
-    fontSize: 20,
     margin: 10,
   },
   input: {
     color: '#000',
-    width: '100%',
+    width: 290,
   },
 });

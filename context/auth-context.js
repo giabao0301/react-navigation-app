@@ -1,10 +1,10 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, createContext} from 'react';
 import {Alert} from 'react-native';
 
-const AuthContext = React.createContext({
+const AuthContext = createContext({
   isAuthenticated: false,
-  onLogout: () => {},
   onLogin: (email, password) => {},
+  onLogout: () => {},
 });
 
 export const AuthContextProvider = props => {

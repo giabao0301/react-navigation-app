@@ -5,7 +5,7 @@ import InputField from '../UI/InputField';
 import MainButton from '../UI/MainButton';
 import BottomLine from '../UI/BottomLine';
 
-const SignUpSreen = ({navigation}) => {
+const SignUpScreen = ({navigation}) => {
   return (
     <View style={styles.body}>
       <Header title="Create New Account" />
@@ -35,7 +35,7 @@ const SignUpSreen = ({navigation}) => {
   );
 };
 
-export default SignUpSreen;
+export default SignUpScreen;
 const styles = StyleSheet.create({
   body: {
     flex: 1,
